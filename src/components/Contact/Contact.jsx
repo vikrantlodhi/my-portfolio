@@ -6,6 +6,7 @@ import placeholder from '../../assets/placeholder.png'
 import linkedin from '../../assets/linkedin.png'
 import instagram from '../../assets/instagram.png'
 
+
 const Contact = () => {
 
   const onSubmit = async (event) => {
@@ -42,7 +43,7 @@ const Contact = () => {
             <h1>Let's talk</h1>
             <p>If you're looking for a dedicated developer to bring innovative solutions to your team, let’s connect! I’m always open to new career opportunities where I can grow, contribute, and make a meaningful impact.</p>
             <div className="contact-details">
-               <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsmGWXJtWZpQNWWNzBdlBWpwzlqxlkZFzcqkGHJNWVtKDRVBPpmgClbSpPRwxkFQnrHHhgHb">
+               <a href="mailto:vikrantlodhi3782@gmail.com">
                <div className="contact-detail">
                 <img src={gmail} alt="" /><p>vikrantlodhi3782@gmail.com</p>
                 </div>
@@ -57,11 +58,11 @@ const Contact = () => {
                     <img src={instagram} alt="" /><p>Instagram</p>
                 </div>
                </a>
-                
+                <a href="">
                 <div className="contact-detail">
                     <img src={placeholder} alt="" /><p>Bhopal - Madhya Pradesh, India</p>
                 </div>
-                
+                </a>
             </div>     
         </div>
         <form onSubmit={onSubmit} className="contact-right">
