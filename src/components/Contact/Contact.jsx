@@ -58,11 +58,11 @@ const Contact = () => {
                     <img src={instagram} alt="" /><p>Instagram</p>
                 </div>
                </a>
-                <a href="">
+                
                 <div className="contact-detail">
                     <img src={placeholder} alt="" /><p>Bhopal - Madhya Pradesh, India</p>
                 </div>
-                </a>
+                
             </div>     
         </div>
         <form onSubmit={onSubmit} className="contact-right">
