@@ -16,7 +16,7 @@
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 40px;
+    gap: 70px;
     font-size: 20px;
 }
 
@@ -79,8 +79,8 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 70px;
-        font-size: 22px;
+        gap: 15px;
+        font-size: 20px;
         margin-top: 20px;
         width: 100%;
         text-align: center;
