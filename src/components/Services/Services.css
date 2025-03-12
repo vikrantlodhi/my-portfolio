@@ -1,0 +1,126 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 80px 100px;
+}
+.services-title{
+    position: relative;
+
+}
+.services-title h1{
+    padding: 0px 30px;
+    font-size: 60px;
+    font-weight: 600;
+}
+.services-title img{
+    width: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.services-format{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+}
+.services-format h3{
+    font-size: 30px;
+    font-weight: 600;
+
+}
+.services-format h2{
+    font-size: 35px;
+    font-weight: 800;
+    background: linear-gradient(red,orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.services-format p{
+    color: #fff;
+    font-size: 20px;
+    line-height: 25px;
+    max-width: 300px;
+}
+.services-readmore{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 15px;
+}
+.services-format:hover{
+    border: 2px solid red;
+    background-image: linear-gradient(blue grey);
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services{
+        margin: 100px 100px;
+        gap: 60px;
+    }
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .services-title h1 {
+        font-size: 60px;
+    }
+
+    .services-format h2 {
+        font-size: 30px;
+    }
+
+    .services-format p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        margin: 50px 20px;
+        gap: 20px;
+    }
+
+    .services-title h1 {
+        font-size: 40px;
+    }
+
+    .services-format {
+        padding: 30px 70px;
+    }
+
+    .services-format h2 {
+        font-size: 25px;
+
+    }
+
+    .services-format p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
