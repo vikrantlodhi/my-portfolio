@@ -33,11 +33,11 @@
 
 .mywork-container img {
     box-sizing: border-box;
-    width: 300px;
+    width: 350px;
     height: 200px;
     transition: 0.3s;
     cursor: pointer;
-    border: 2px solid #fe4c1f;
+    border: 3px solid #fe4c1f;
     border-radius: 10px;
 
 }
@@ -94,11 +94,11 @@
     }
     .mywork-container img {
         box-sizing: border-box;
-        width: 300px;
+        width: 350px;
         height: 200px;
         transition: 0.3s;
         cursor: pointer;
-        border: 2px solid #fe4c1f;
+        border: 3px solid #fe4c1f;
         border-radius: 10px;
     
     }
