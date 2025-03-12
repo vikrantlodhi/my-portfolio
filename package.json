@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "package-name": "^0.1.0",
+    "react": "^19.0.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-dom": "^19.0.0",
+    "react-scripts": "^5.0.1",
+    "react-scroll": "^1.9.3",
+    "vite": "^6.2.1",
+    "workbox-webpack-plugin": "^7.3.0"
+  }
+  
+
+  
+  
+}

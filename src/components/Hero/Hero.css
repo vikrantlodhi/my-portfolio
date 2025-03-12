@@ -1,0 +1,124 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 100px;
+    flex-direction: row; /* Default: Image on right, text on left */
+  }
+  
+  .hero-content {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .hero img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .hero h1 span {
+    background: linear-gradient(red, orange);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero p {
+    width: 80%;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  
+  .hero-action {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  
+  .hero-connect button {
+    background: none;
+    padding: 15px 20px;
+    border-radius: 40px;
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 3px solid #fe4c1f;
+    color: #ffffff;
+  }
+  
+  .hero-resume button {
+    padding: 15px 40px;
+    border-radius: 40px;
+    background: none;
+    font-weight: Outfit;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid #fe4c1f;
+    color: #ffffff;
+  }
+  
+  .hero-connect button:hover {
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+  }
+  
+  .hero-resume button:hover {
+    transform: scale(1.1);
+    transition: 0.1s ease-in-out;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column-reverse; /* Profile image on top in mobile */
+      margin: 20px 100px;
+      text-align: center; /* Center the text content */
+    }
+  
+    .hero-content {
+      text-align: center;
+    }
+    .hero-content h1 {
+      margin: 0px 0px;    
+    }
+    .hero-content p {
+      margin: 20px 0px;
+    
+    }
+    .hero img {
+        margin-top: 50px;
+      width: 250px;
+    }
+  
+    .hero h1 {
+      font-size: 36px;
+    }
+  
+    .hero p {
+        
+      font-size: 20px;
+      width: 100%; /* Make paragraph take full width */
+      text-align: center; /* Ensure paragraph is also centered */
+    }
+  
+    .hero-action {
+      margin-top: 40px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+  
