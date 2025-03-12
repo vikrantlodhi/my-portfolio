@@ -42,18 +42,26 @@ const Contact = () => {
             <h1>Let's talk</h1>
             <p>If you're looking for a dedicated developer to bring innovative solutions to your team, let’s connect! I’m always open to new career opportunities where I can grow, contribute, and make a meaningful impact.</p>
             <div className="contact-details">
-                <div className="contact-detail">
-                    <img src={gmail} alt="" /><p>vikrantlodhi3782@gmail.com</p>
+               <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsmGWXJtWZpQNWWNzBdlBWpwzlqxlkZFzcqkGHJNWVtKDRVBPpmgClbSpPRwxkFQnrHHhgHb">
+               <div className="contact-detail">
+                <img src={gmail} alt="" /><p>vikrantlodhi3782@gmail.com</p>
                 </div>
+               </a>
+                <a href="https://www.linkedin.com/in/vikrant-lodhi/">
                 <div className="contact-detail">
                     <img src={linkedin} alt="" /><p>LinkedIn</p>
                 </div>
-                <div className="contact-detail">
+                </a>
+               <a href="https://www.instagram.com/vikrantlodhii/">
+               <div className="contact-detail">
                     <img src={instagram} alt="" /><p>Instagram</p>
                 </div>
+               </a>
+                
                 <div className="contact-detail">
                     <img src={placeholder} alt="" /><p>Bhopal - Madhya Pradesh, India</p>
                 </div>
+                
             </div>     
         </div>
         <form onSubmit={onSubmit} className="contact-right">
