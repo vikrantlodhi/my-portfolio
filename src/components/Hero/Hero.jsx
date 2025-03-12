@@ -14,7 +14,15 @@ const Hero = () => {
         </p>
         <div className="hero-action">
           <div className="hero-connect"><AnchorLink className='anchor-link' offset={50} href='#contact'><button>Connect With Me</button></AnchorLink></div>
-          <div className="hero-resume"><button>My Resume</button></div>
+       
+          <div className="hero-resume">
+            <a href="https://vikrantlodhi.github.io/resume/">
+            <button>My Resume</button>
+            </a>
+          </div>
+
+       
+
         </div>
       </div>
       <img src={profile_img} alt="Profile" className="hero-img" />
