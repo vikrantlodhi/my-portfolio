@@ -1,141 +1,90 @@
-import { useState } from 'react'
-
-export default function Contact() {
-  const [result, setResult] = useState('')
-
-  const onSubmit = async (event) => {
-    event.preventDefault()
-    setResult('Sending...')
-    const formData = new FormData(event.target)
-    formData.append('access_key', '1fe31c14-4da0-4767-9331-80228bef953e')
-
-    const response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData,
-    })
-
-    const data = await response.json()
-    if (data.success) {
-      setResult('✓ Message sent successfully!')
-      event.target.reset()
-    } else {
-      setResult('✗ ' + data.message)
-    }
-  }
+export default function Work() {
+  const experiences = [
+    {
+      company: 'SSi Digital Academy',
+      role: 'Java Developer + Instructor',
+      type: 'Full-time · Onsite',
+      location: 'Indore, Madhya Pradesh',
+      duration: 'June 2025 — Present',
+      description: 'Training aspiring developers in programming languages and tools while creating course content and providing hands-on mentorship.',
+      highlights: [
+        'Conducted sessions on core programming languages and development tools',
+        'Designed and updated assignments, lab exercises, and coding challenges',
+        'Guided students through debugging, troubleshooting, and real-world scenarios',
+        'Helped multiple batches build strong foundations and advance their careers',
+      ],
+    },
+    {
+      company: 'InnoBimb InfoTech',
+      role: 'Junior Developer',
+      type: 'Internship · Onsite',
+      location: 'Bhopal, Madhya Pradesh',
+      duration: 'April 2025 — May 2025',
+      description: 'Developed responsive web apps using React.js, fixed bugs, optimized performance, and collaborated with teams using Git version control.',
+      highlights: [
+        'Built and maintained web apps using React.js and Node.js for client projects',
+        'Created user-friendly, responsive interfaces for enhanced user experience',
+        'Resolved issues and enhanced application efficiency',
+        'Used Git and GitHub for code management and team coordination',
+      ],
+    },
+  ]
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 px-6 overflow-hidden bg-[#0a0a0a]">
+    <section id="work" className="relative py-24 md:py-32 px-6 overflow-hidden bg-[#0a0a0a]">
       <div className="w-[90%] mx-auto relative z-10">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-
-          {/* Left */}
-          <div>
-            <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-8">
-              Let's build <br />
-              something <span className="font-script font-normal text-[#5ED9A0]">worth</span> shipping.
-            </h2>
-
-            <p className="text-[#9ca3af] text-lg leading-relaxed mb-12 max-w-md">
-              Have an idea, project, or opportunity in mind? Drop a message and I'll get back to you within 24 hours.
-            </p>
-
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <span className="text-[#5ED9A0] font-mono text-xs tracking-widest w-20">EMAIL</span>
-                <a href="mailto:vikrantlodhi3782@gmail.com" className="text-white hover:text-[#5ED9A0] transition">
-                  vikrantlodhi3782@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <span className="text-[#5ED9A0] font-mono text-xs tracking-widest w-20">LOCATION</span>
-                <span className="text-white">Indore, India</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right - Form */}
-          <form onSubmit={onSubmit} className="space-y-6">
-
-            <div>
-              <label className="block text-[#5ED9A0] font-mono text-xs tracking-widest mb-2">NAME</label>
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Your name"
-                className="w-full bg-transparent border-b border-[#27272a] py-3 text-white text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
-              />
-            </div>
-
-            <div>
-              <label className="block text-[#5ED9A0] font-mono text-xs tracking-widest mb-2">EMAIL</label>
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-                className="w-full bg-transparent border-b border-[#27272a] py-3 text-white text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
-              />
-            </div>
-
-            <div>
-              <label className="block text-[#5ED9A0] font-mono text-xs tracking-widest mb-2">SUBJECT</label>
-              <input
-                type="text"
-                name="subject"
-                required
-                placeholder="What's this about?"
-                className="w-full bg-transparent border-b border-[#27272a] py-3 text-white text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
-              />
-            </div>
-
-            <div>
-              <label className="block text-[#5ED9A0] font-mono text-xs tracking-widest mb-2">MESSAGE</label>
-              <textarea
-                name="message"
-                rows="5"
-                required
-                placeholder="Tell me about your project or idea..."
-                className="w-full bg-transparent border-b border-[#27272a] py-3 text-white text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563] resize-none"
-              />
-            </div>
-
-            
-      <button
-  type="submit"
-  onClick={() => console.log('Button clicked')}
-  className="relative z-10 bg-[#5ED9A0] text-black font-semibold px-8 h-12 rounded-full text-sm hover:opacity-90 transition"
->
-  Send Message →
-</button>
-            {result && (
-              <p className="text-[#5ED9A0] text-sm mt-4">{result}</p>
-            )}
-
-          </form>
-
+        {/* Heading centered */}
+        <div className="flex flex-col items-center text-center gap-6 mb-20">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tighter">
+            Where I've 
+            <span className="font-script font-normal text-[#5ED9A0]"> shipped </span> work.
+          </h2>
+         
         </div>
 
-        {/* Footer */}
-        <div className="mt-24 pt-8 border-t border-[#27272a] flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-[#9ca3af] text-sm">
-            © 2025 · Crafted with intent & chai.
-          </p>
-          <div className="flex items-center gap-6 text-sm">
-            <a href="https://linkedin.com/in/vikrant-lodhi" target="_blank" rel="noopener noreferrer" className="group text-[#9ca3af] hover:text-[#5ED9A0] transition inline-flex items-center gap-1">
-              LinkedIn <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">↗</span>
-            </a>
-            <a href="https://github.com/vikrantlodhi" target="_blank" rel="noopener noreferrer" className="group text-[#9ca3af] hover:text-[#5ED9A0] transition inline-flex items-center gap-1">
-              GitHub <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">↗</span>
-            </a>
-            <a href="#top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} className="group text-[#9ca3af] hover:text-[#5ED9A0] transition inline-flex items-center gap-1">
-              Back to top <span className="opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all">↑</span>
-            </a>
-          </div>
+        {/* Experience timeline */}
+        <div className="space-y-16">
+          {experiences.map((exp, idx) => (
+            <div
+              key={idx}
+              className="grid grid-cols-1 md:grid-cols-12 gap-8 group border-l-2 border-[#27272a] hover:border-[#5ED9A0] pl-8 transition-colors duration-500"
+            >
+              <div className="md:col-span-3">
+                <p className="text-[#5ED9A0] font-mono text-sm tracking-widest">
+                  {exp.duration}
+                </p>
+                <p className="text-[#9ca3af] text-sm mt-2">{exp.type}</p>
+                <p className="text-[#9ca3af] text-sm">{exp.location}</p>
+              </div>
+
+              <div className="md:col-span-9">
+                <h3 className="text-white text-3xl md:text-4xl font-black tracking-tight">
+                  {exp.role}
+                </h3>
+                <p className="text-[#5ED9A0] text-lg mt-2 font-medium">
+                  @ {exp.company}
+                </p>
+
+                <p className="text-[#9ca3af] text-base md:text-lg leading-relaxed mt-6">
+                  {exp.description}
+                </p>
+
+                <ul className="mt-6 space-y-3">
+                  {exp.highlights.map((point) => (
+                    <li key={point} className="flex items-start gap-3 text-[#9ca3af]">
+                      <span className="text-[#5ED9A0] mt-1.5">◆</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </div>
+          ))}
         </div>
 
       </div>
     </section>
-  )
+  );
 }
