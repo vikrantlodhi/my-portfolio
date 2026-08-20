@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 export default function Hero() {
   return (
     <section className="relative flex items-center justify-center overflow-hidden h-[100dvh] pt-16 md:pt-20 bg-[#0a0a0a]">
@@ -5,12 +7,15 @@ export default function Hero() {
       {/* Top-left green glow */}
       <div className="absolute top-0 left-0 w-[200px] sm:w-[300px] md:w-[600px] h-[200px] sm:h-[300px] md:h-[600px] bg-[radial-gradient(circle_at_top_left,rgba(94,217,160,0.15),transparent_70%)] pointer-events-none z-10" />
 
-      {/* Static Repeating Ghost "HELLO" Background Pattern */}
+      {/* Animated Repeating Ghost "HELLO" Background Pattern */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300vw] h-[300vh] flex flex-col justify-center pointer-events-none select-none z-0">
         {[...Array(25)].map((_, i) => (
-          <div 
+          <motion.div 
             key={i}
-            className={`flex whitespace-nowrap opacity-40 w-fit ${i % 2 === 0 ? '-translate-x-12' : 'translate-x-12'}`}
+            // Continuous infinite scroll: even rows go left, odd rows go right
+            animate={{ x: i % 2 === 0 ? ['0%', '-50%'] : ['-50%', '0%'] }}
+            transition={{ repeat: Infinity, duration: 80, ease: 'linear' }}
+            className="flex whitespace-nowrap opacity-40 w-fit"
           >
             {[...Array(30)].map((_, j) => (
               <h2
@@ -24,11 +29,11 @@ export default function Hero() {
                 HELLO
               </h2>
             ))}
-          </div>
+          </motion.div>
         ))}
       </div>
 
-      {/* Main Container */}
+      {/* Main Container - STATIC TEXT (No fade-in delays) */}
       <div className="w-[90%] max-w-7xl mx-auto relative z-20 text-white font-black tracking-tighter flex flex-col justify-center h-full gap-8 sm:gap-10 xl:gap-6">
 
         {/* DESKTOP ONLY: Absolute floating greetings */}
