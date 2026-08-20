@@ -10,27 +10,15 @@ import FadeIn from './components/FadeIn'
 
 export default function App() {
   return (
-    <div className="bg-[#0a0a0a] min-h-screen text-white">
+    <>
       <Navbar />
       <Hero />
-      <FadeIn>
-        <About />
-      </FadeIn>
-      <FadeIn delay={0.1}>
-        <Skills />
-      </FadeIn>
-      <FadeIn delay={0.1}>
-        <Education />
-      </FadeIn>
-      <FadeIn delay={0.1}>
-        <Work />
-      </FadeIn>
-      <FadeIn delay={0.1}>
-        <Projects />
-      </FadeIn>
-      <FadeIn delay={0.1}>
-        <Contact />
-      </FadeIn>
-    </div>
+      <About />
+      <Skills />
+      <Education />
+      <Work />
+      <Projects />
+      <Contact />
+    </>
   )
 }
