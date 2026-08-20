@@ -22,16 +22,22 @@ export default function Projects() {
     <section id="projects" className="scroll-mt-24 relative py-8 md:py-10 px-6 overflow-hidden bg-white">
       <div className="w-[90%] mx-auto relative z-10">
 
-        {/* Heading - right aligned */}
-        <div className="mb-20 flex justify-end">
-         <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-black leading-[0.95] tracking-tighter text-right">
-  Every project is a <br />
-  new <span className="font-script font-normal text-[#5ED9A0]"> experiment </span>in code.
-</h2>
+        {/* Heading - centered on mobile/tablet, right-aligned on desktop */}
+        <div className="mb-20 flex justify-center lg:justify-end">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-black leading-[0.95] tracking-tighter text-center lg:text-right">
+            Every project
+            <br className="block lg:hidden" />
+            {' '}is a{' '}
+            <br className="hidden lg:block" />
+            new{' '}
+            <br className="block lg:hidden" />
+            <span className="font-script font-normal text-[#5ED9A0]"> experiment </span>
+            in code.
+          </h2>
         </div>
 
-        {/* Project cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Project cards - stacked below 1080px, 2-columns at 1080px and above */}
+        <div className="grid grid-cols-1 min-[1080px]:grid-cols-2 gap-6">
           {projects.map((project, idx) => (
             <div
               key={idx}

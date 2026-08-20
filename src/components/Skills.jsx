@@ -25,8 +25,8 @@ export default function Skills() {
       <div className="w-[90%] mx-auto relative z-10 mb-16 px-6">
 
         {/* Heading + Button */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8">
-          <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tighter">
+        <div className="flex flex-col md:flex-row items-center md:items-end justify-center md:justify-between gap-8">
+          <h2 className="text-center md:text-left text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tighter">
             Fluent in the <br />
             <span className="font-script font-normal text-[#5ED9A0]">craft</span>.
           </h2>

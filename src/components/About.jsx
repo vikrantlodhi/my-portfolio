@@ -6,23 +6,23 @@ export default function About() {
       <div className="w-[90%] mx-auto relative z-10">
 
         {/* Big statement heading */}
-        <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-black leading-[0.95] tracking-tighter max-w-5xl mb-16">
+        <h2 className="text-center lg:text-left mx-auto lg:mx-0 text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-black leading-[0.95] tracking-tighter max-w-5xl mb-16">
           Turning ideas into <span className="font-script font-normal text-[#5ED9A0]">code</span> that ships.
         </h2>
 
-        {/* Two column: portrait + info */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-end">
+        {/* Two column on desktop, stacked on mobile & tablet */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-          {/* Left - Portrait, no frame */}
-          <div className="relative">
-  <img
-  src={profile}
-  alt="Vikrant Lodhi"
-  className="w-full max-w-md h-auto object-cover rotate-[-4deg] transition-transform duration-500 border-[0px] border-[#FFF200]"
-/>
- <span className="font-script font-bold text-[#FFBB00] text-5xl md:text-7xl absolute -top-8 -right-6 rotate-[-8deg] drop-shadow-lg">
-  that's me →
-</span>
+          {/* Left - Portrait centered on mobile/tablet */}
+          <div className="relative mx-auto lg:mx-0 max-w-md w-full">
+            <img
+              src={profile}
+              alt="Vikrant Lodhi"
+              className="w-full max-w-md h-auto object-cover rotate-[-4deg] transition-transform duration-500 border-[0px] border-[#FFF200]"
+            />
+            <span className="font-script font-bold text-[#FFBB00] text-5xl md:text-7xl absolute -top-8 -right-6 rotate-[-8deg] drop-shadow-lg">
+              that's me →
+            </span>
           </div>
 
           {/* Right - Body text */}

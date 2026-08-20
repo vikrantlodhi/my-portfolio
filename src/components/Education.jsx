@@ -12,11 +12,11 @@ export default function Education() {
   ]
 
   return (
-<section id="education" className="scroll-mt-24 relative py-8 md:py-10 px-6 overflow-hidden bg-white">
+    <section id="education" className="scroll-mt-24 relative min-h-[100dvh] flex items-center justify-center py-16 md:py-24 px-6 overflow-hidden bg-white">
       <div className="w-[90%] mx-auto relative z-10">
 
         {/* Heading */}
-        <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-black leading-[0.95] tracking-tighter mb-20 max-w-4xl">
+        <h2 className="text-center md:text-left mx-auto md:mx-0 text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-black leading-[0.95] tracking-tighter mb-20 max-w-4xl">
           Where I <span className="font-script font-normal text-[#5ED9A0]">learned </span>to think.
         </h2>
 

@@ -24,38 +24,38 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="scroll-mt-24 relative py-24 md:py-32 px-6 overflow-hidden bg-[#0a0a0a]">
-      <div className="w-[90%] mx-auto relative z-10">
+    <section id="contact" className="min-h-[100dvh] relative flex items-center py-16 md:py-24 px-4 sm:px-6 bg-[#0a0a0a]">
+      <div className="w-[90%] max-w-7xl mx-auto relative z-10 my-auto">
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
           {/* Left */}
           <div>
-            <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-8">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-black text-white leading-[0.95] tracking-tighter mb-6 sm:mb-8">
               Let's build <br />
               something <span className="font-script font-normal text-[#5ED9A0]">worth</span> shipping.
             </h2>
 
-            <p className="text-[#9ca3af] text-lg leading-relaxed mb-12 max-w-md">
+            <p className="text-[#9ca3af] text-base sm:text-lg leading-relaxed mb-8 sm:mb-12 max-w-md">
               Have an idea, project, or opportunity in mind? Drop a message and I'll get back to you within 24 hours.
             </p>
 
             <div className="space-y-4">
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <span className="text-[#5ED9A0] font-mono text-xs tracking-widest w-20">EMAIL</span>
-                <a href="mailto:vikrantlodhi3782@gmail.com" className="text-white hover:text-[#5ED9A0] transition">
+                <a href="mailto:vikrantlodhi3782@gmail.com" className="text-white hover:text-[#5ED9A0] transition text-sm sm:text-base break-all">
                   vikrantlodhi3782@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="text-[#5ED9A0] font-mono text-xs tracking-widest w-20">LOCATION</span>
-                <span className="text-white">Indore, India</span>
+                <span className="text-white text-sm sm:text-base">Indore, India</span>
               </div>
             </div>
           </div>
 
           {/* Right - Form */}
-          <form onSubmit={onSubmit} className="space-y-6">
+          <form onSubmit={onSubmit} className="space-y-5 sm:space-y-6">
 
             <div>
               <label className="block text-[#5ED9A0] font-mono text-xs tracking-widest mb-2">NAME</label>
@@ -64,7 +64,7 @@ export default function Contact() {
                 name="name"
                 required
                 placeholder="Your name"
-                className="w-full bg-transparent border-b border-[#27272a] py-3 text-white text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
+                className="w-full bg-transparent border-b border-[#27272a] py-2.5 sm:py-3 text-white text-base sm:text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
               />
             </div>
 
@@ -75,7 +75,7 @@ export default function Contact() {
                 name="email"
                 required
                 placeholder="you@example.com"
-                className="w-full bg-transparent border-b border-[#27272a] py-3 text-white text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
+                className="w-full bg-transparent border-b border-[#27272a] py-2.5 sm:py-3 text-white text-base sm:text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
               />
             </div>
 
@@ -86,7 +86,7 @@ export default function Contact() {
                 name="subject"
                 required
                 placeholder="What's this about?"
-                className="w-full bg-transparent border-b border-[#27272a] py-3 text-white text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
+                className="w-full bg-transparent border-b border-[#27272a] py-2.5 sm:py-3 text-white text-base sm:text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563]"
               />
             </div>
 
@@ -94,16 +94,16 @@ export default function Contact() {
               <label className="block text-[#5ED9A0] font-mono text-xs tracking-widest mb-2">MESSAGE</label>
               <textarea
                 name="message"
-                rows="5"
+                rows="4"
                 required
                 placeholder="Tell me about your project or idea..."
-                className="w-full bg-transparent border-b border-[#27272a] py-3 text-white text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563] resize-none"
+                className="w-full bg-transparent border-b border-[#27272a] py-2.5 sm:py-3 text-white text-base sm:text-lg focus:border-[#5ED9A0] focus:outline-none transition placeholder:text-[#4b5563] resize-none"
               />
             </div>
 
             <button
               type="submit"
-              className="bg-[#5ED9A0] text-black font-semibold px-8 h-12 rounded-full text-sm hover:opacity-90 transition"
+              className="bg-[#5ED9A0] text-black font-semibold px-8 h-12 rounded-full text-sm hover:opacity-90 transition w-full sm:w-fit cursor-pointer"
             >
               Send Message →
             </button>
@@ -117,7 +117,7 @@ export default function Contact() {
         </div>
 
         {/* Footer */}
-        <div className="mt-24 pt-8 border-t border-[#27272a] flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-16 sm:mt-20 md:mt-24 pt-8 border-t border-[#27272a] flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <p className="text-[#9ca3af] text-sm">
             © 2025 · Crafted with intent & chai.
           </p>
@@ -128,7 +128,7 @@ export default function Contact() {
             <a href="https://github.com/vikrantlodhi" target="_blank" rel="noopener noreferrer" className="group text-[#9ca3af] hover:text-[#5ED9A0] transition inline-flex items-center gap-1">
               GitHub <span className="opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">↗</span>
             </a>
-            <a href="#top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} className="group text-[#9ca3af] hover:text-[#5ED9A0] transition inline-flex items-center gap-1">
+            <a href="#" className="group text-[#9ca3af] hover:text-[#5ED9A0] transition inline-flex items-center gap-1">
               Back to top <span className="opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all">↑</span>
             </a>
           </div>
