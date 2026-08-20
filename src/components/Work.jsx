@@ -31,7 +31,7 @@ export default function Work() {
   ]
 
   return (
-    <section id="work" className="relative py-24 md:py-32 px-6 overflow-hidden bg-[#0a0a0a]">
+    <section id="work" className="scroll-mt-24 relative py-24 md:py-32 px-6 overflow-hidden bg-[#0a0a0a]">
       <div className="w-[90%] mx-auto relative z-10">
 
         {/* Heading centered */}

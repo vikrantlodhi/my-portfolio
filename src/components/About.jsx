@@ -2,7 +2,7 @@ import profile from '../assets/aboutimg.jpeg'
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 md:py-32 px-6 overflow-hidden bg-white">
+    <section id="about" className="scroll-mt-24 relative py-24 md:py-32 px-6 overflow-hidden bg-white">
       <div className="w-[90%] mx-auto relative z-10">
 
         {/* Big statement heading */}

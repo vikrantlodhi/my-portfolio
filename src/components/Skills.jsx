@@ -21,7 +21,7 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" className="relative py-24 md:py-32 overflow-hidden bg-[#0a0a0a]">
+    <section id="skills" className="scroll-mt-24 relative py-24 md:py-32 overflow-hidden bg-[#0a0a0a]">
       <div className="w-[90%] mx-auto relative z-10 mb-16 px-6">
 
         {/* Heading + Button */}
@@ -32,7 +32,7 @@ export default function Skills() {
           </h2>
 
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative bg-[#FFF200] text-black font-semibold px-6 rounded-full text-sm overflow-hidden inline-flex items-center h-12 w-fit"

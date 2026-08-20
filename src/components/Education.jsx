@@ -12,7 +12,7 @@ export default function Education() {
   ]
 
   return (
-<section id="education" className="relative py-8 md:py-10 px-6 overflow-hidden bg-white">
+<section id="education" className="scroll-mt-24 relative py-8 md:py-10 px-6 overflow-hidden bg-white">
       <div className="w-[90%] mx-auto relative z-10">
 
         {/* Heading */}
