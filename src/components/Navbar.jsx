@@ -40,9 +40,9 @@ export default function Navbar() {
             className="hidden xl:inline-flex group relative bg-[#5ED9A0] text-black font-semibold px-5 rounded-full text-sm overflow-hidden items-center h-10"
           >
             <span className="block transition-transform duration-500 group-hover:-translate-y-10">
-              Let's Connect
+              Hire Me ✦
             </span>
-            <span className="absolute inset-0 flex items-center justify-center translate-y-10 transition-transform duration-500 group-hover:translate-y-0">
+            <span className="absolute inset-0 flex items-center justify-center translate-y-10 transition-transform duration-500 group-hover:translate-y-0 bg-[#FFF200]">
               Say Hello ✦
             </span>
           </a>
