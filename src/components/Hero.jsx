@@ -11,7 +11,8 @@ const fadeUp = {
 
 export default function Hero() {
   return (
-    <section className="relative flex overflow-hidden px-4 sm:px-6">
+    // Section uses flex items-center to perfectly center the inner content vertically
+    <section className="relative flex items-center justify-center overflow-hidden px-4 sm:px-6 h-[100dvh] pt-16 md:pt-20">
 
       {/* Top-left green glow */}
       <div className="absolute top-0 left-0 w-[200px] sm:w-[300px] md:w-[600px] h-[200px] sm:h-[300px] md:h-[600px] bg-[radial-gradient(circle_at_top_left,rgba(94,217,160,0.15),transparent_70%)] pointer-events-none" />
@@ -34,7 +35,8 @@ export default function Hero() {
         </h2>
       </motion.div>
 
-      <div className="w-[95%] md:w-[90%] mx-auto relative z-10 text-white font-black tracking-tighter leading-[1.1] md:leading-[1] xl:leading-[0.85] flex flex-col justify-center min-h-[90vh] md:min-h-screen gap-10 sm:gap-16 md:gap-16 xl:gap-0 mt-16 md:mt-0">
+      {/* Inner container simply stacks the content with gaps */}
+      <div className="w-[95%] md:w-[90%] w-full relative z-10 text-white font-black tracking-tighter leading-[1.1] md:leading-[1] xl:leading-[0.85] flex flex-col gap-8 sm:gap-12 md:gap-16 xl:gap-0">
 
         {/* Div 1 - Left on Desktop, Center on Mobile/Tablet */}
         <motion.div
@@ -44,8 +46,8 @@ export default function Hero() {
           variants={fadeUp}
           className="relative text-center xl:text-left flex flex-col items-center xl:block"
         >
-          {/* Added mb-8 sm:mb-12 to push it away from headline on mobile */}
-          <span className="block mb-8 sm:mb-12 md:mb-16 xl:mb-0 xl:absolute xl:top-12 xl:right-16 font-script font-normal text-[#FFD86B] text-4xl sm:text-5xl md:text-6xl xl:text-7xl rotate-[-8deg]">
+          {/* Greeting moved ABOVE the heading for mobile/tablet */}
+          <span className="block mb-6 sm:mb-8 md:mb-12 xl:mb-0 xl:absolute xl:top-12 xl:right-16 font-script font-normal text-[#FFD86B] text-4xl sm:text-5xl md:text-6xl xl:text-7xl rotate-[-8deg]">
             hey there!
           </span>
 
@@ -74,7 +76,7 @@ export default function Hero() {
           variants={fadeUp}
           className="relative text-center xl:text-right flex flex-col items-center xl:block"
         >
-          <h1 className="text-[11vw] sm:text-7xl md:text-8xl xl:text-9xl flex items-baseline gap-3 sm:gap-4 flex-wrap justify-center xl:justify-end leading-[1.2] md:leading-[1.1] xl:leading-[0.85]">
+          <h1 className="text-[11vw] sm:text-7xl md:text-8xl xl:text-9xl flex items-baseline gap-2 sm:gap-3 md:gap-4 flex-wrap justify-center xl:justify-end leading-[1.2] md:leading-[1.1] xl:leading-[0.85]">
             <span>with</span>
             <span className="inline-block border border-[#5ED9A0]/40 px-3 md:px-4 py-0.5 md:py-1 text-[#5ED9A0] font-script font-normal text-[9vw] sm:text-6xl md:text-7xl xl:text-8xl rotate-[-3deg]">
               passion
@@ -82,8 +84,7 @@ export default function Hero() {
             <span>& precision<span className="text-[#5ED9A0]">.</span></span>
           </h1>
 
-          {/* Added mt-10 sm:mt-12 to push it down from headline on mobile */}
-          <span className="block mt-10 sm:mt-12 md:mt-16 xl:mt-0 xl:absolute xl:bottom-2 xl:left-16 font-script font-normal text-[#FF7EB6] text-4xl sm:text-5xl md:text-6xl xl:text-7xl rotate-[-5deg]">
+          <span className="block mt-8 sm:mt-10 md:mt-12 xl:mt-0 xl:absolute xl:bottom-2 xl:left-16 font-script font-normal text-[#FF7EB6] text-4xl sm:text-5xl md:text-6xl xl:text-7xl rotate-[-5deg]">
             let's create ↗
           </span>
         </motion.div>
